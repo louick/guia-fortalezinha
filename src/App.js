@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Layout } from 'antd';
+import MyHeader from './components/MyHeader';
+import Home from './pages/Home';
+import ComoChegar from './pages/ComoChegar'; // nova rota para "Como Chegar"
+import Transporte from './pages/Transporte';
+import Lazer from './pages/Lazer';
+import Galeria from './pages/Galeria';
+
+const { Content, Footer } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Layout>
+        <MyHeader />
+        <Content style={{ padding: '24px', minHeight: 'calc(100vh - 64px)' }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/como-chegar" element={<ComoChegar />} />
+            <Route path="/transporte" element={<Transporte />} />
+            <Route path="/lazer" element={<Lazer />} />
+            <Route path="/galeria" element={<Galeria />} />
+          </Routes>
+        </Content>
+        <Footer style={{ textAlign: 'center' }}>
+          Guia de Fortalezinha ©2025
+        </Footer>
+      </Layout>
+    </Router>
   );
 }
 
