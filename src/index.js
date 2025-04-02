@@ -2,8 +2,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-// Importe também o CSS do antd, se quiser
-import 'antd/dist/reset.css'; // ou 'antd/dist/antd.css' dependendo da versão
+import 'antd/dist/reset.css';
+import './index.css';
+
+// Importa a configuração do i18n
+import './i18n';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

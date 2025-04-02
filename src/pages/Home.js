@@ -2,6 +2,7 @@
 import React, { useState, useMemo } from 'react';
 import { Layout, Input, Menu, Row, Col, Card, Typography, Button } from 'antd';
 import { WhatsAppOutlined, GlobalOutlined, CameraOutlined } from '@ant-design/icons';
+import { useTranslation } from 'react-i18next';
 import lodgingsData from '../data/lodgings';
 import ImageCarousel from '../components/ImageCarousel';
 
@@ -9,6 +10,7 @@ const { Content } = Layout;
 const { Title, Text } = Typography;
 
 export default function Home() {
+  const { t } = useTranslation();
   const [lodgings, setLodgings] = useState(lodgingsData);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Todos');
@@ -52,18 +54,14 @@ export default function Home() {
   };
 
   const openWhatsApp = (number) => {
-    const message = encodeURIComponent(
-      "Olá! Vi sua hospedagem no Guia de Fortalezinha e fiquei muito interessado. Poderia me enviar mais informações? Obrigado!"
-    );
+    const message = encodeURIComponent(t('whatsapp_message'));
     window.open(`https://wa.me/${number}?text=${message}`, '_blank');
   };
 
-  // Função que decide como exibir cada linha de detalhe
   const renderDetailLine = (detail) => {
     if (detail.link) {
       const linkLower = detail.link.toLowerCase();
       if (linkLower.includes('facebook.com')) {
-        // Exibe um botão de Facebook
         return (
           <Button
             key={detail.link}
@@ -72,11 +70,10 @@ export default function Home() {
             icon={<GlobalOutlined />}
             onClick={() => window.open(detail.link, '_blank')}
           >
-            Página no Facebook
+            {t('facebook')}
           </Button>
         );
       } else if (linkLower.includes('instagram.com')) {
-        // Exibe um botão de Instagram
         return (
           <Button
             key={detail.link}
@@ -85,11 +82,10 @@ export default function Home() {
             icon={<CameraOutlined />}
             onClick={() => window.open(detail.link, '_blank')}
           >
-            Perfil no Instagram
+            {t('instagram')}
           </Button>
         );
       } else {
-        // Link genérico
         return (
           <a
             key={detail.link}
@@ -103,7 +99,6 @@ export default function Home() {
         );
       }
     } else {
-      // Sem link
       return (
         <Text key={detail.label} style={{ display: 'block', margin: '4px 0' }}>
           <strong>{detail.label}:</strong> {detail.value}
@@ -114,7 +109,7 @@ export default function Home() {
 
   return (
     <Content style={{ width: '100%' }}>
-      <Title level={2}>Hospedagens</Title>
+      <Title level={2}>{t('hospedagens')}</Title>
       <Input.Search
         placeholder="Buscar hospedagem..."
         onSearch={setSearchTerm}
@@ -154,7 +149,7 @@ export default function Home() {
                     onClick={() => toggleDetails(lodge.id)}
                     key="details"
                   >
-                    {lodge.showDetails ? "Menos detalhes" : "Mais detalhes"}
+                    {lodge.showDetails ? t('menos_detalhes') : t('mais_detalhes')}
                   </Button>,
                   whatsappNumber && (
                     <Button
@@ -168,16 +163,14 @@ export default function Home() {
                       }}
                       key="whatsapp"
                     >
-                      WhatsApp
+                      {t('whatsapp')}
                     </Button>
                   )
                 ].filter(Boolean)}
               >
                 <Card.Meta
                   title={lodge.title}
-                  description={
-                    <Text type="secondary">Categorias: {lodge.category}</Text>
-                  }
+                  description={<Text type="secondary">{t('categoria')}: {lodge.category}</Text>}
                 />
                 {lodge.showDetails && (
                   <div style={{ marginTop: '8px' }}>

@@ -1,21 +1,38 @@
+// src/components/LanguageSelector.js
 import React from 'react';
-import { ButtonGroup, Button } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { Button, Space } from 'antd';
+import i18n from '../i18n';
 
-function LanguageSelector() {
-  const { i18n } = useTranslation();
-
-  const handleLanguageChange = (lang) => {
+const LanguageSelector = () => {
+  const handleChange = (lang) => {
     i18n.changeLanguage(lang);
   };
 
   return (
-    <ButtonGroup variant="outlined" color="inherit" size="small">
-      <Button onClick={() => handleLanguageChange('pt')}>PT</Button>
-      <Button onClick={() => handleLanguageChange('en')}>EN</Button>
-      <Button onClick={() => handleLanguageChange('es')}>ES</Button>
-    </ButtonGroup>
+    <Space>
+      <Button 
+        type="link" 
+        onClick={() => handleChange('pt')}
+        style={{ color: '#333', textDecoration: 'none', padding: 0, fontSize: '20px' }}
+      >
+        🇧🇷
+      </Button>
+      <Button 
+        type="link" 
+        onClick={() => handleChange('en')}
+        style={{ color: '#333', textDecoration: 'none', padding: 0, fontSize: '20px' }}
+      >
+        🇬🇧
+      </Button>
+      <Button 
+        type="link" 
+        onClick={() => handleChange('es')}
+        style={{ color: '#333', textDecoration: 'none', padding: 0, fontSize: '20px' }}
+      >
+        🇪🇸
+      </Button>
+    </Space>
   );
-}
+};
 
 export default LanguageSelector;

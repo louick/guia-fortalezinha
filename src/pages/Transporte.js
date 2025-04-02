@@ -2,14 +2,14 @@
 import React from 'react';
 import { Card, Row, Col, Button } from 'antd';
 import { PhoneOutlined } from '@ant-design/icons';
+import { useTranslation } from 'react-i18next';
 
-// Defina o array de motoristas com telefone de exibição e número limpo para o WhatsApp
 const motoristas = [
   {
     id: 1,
     nome: 'Anderson',
     telefone: '+55 91 98022-2101',
-    whatsNumber: '5591980222101', // para usar no link do WhatsApp (sem espaços e símbolos)
+    whatsNumber: '5591980222101',
     imagem: process.env.PUBLIC_URL + '/van1.jpg',
   },
   {
@@ -22,10 +22,12 @@ const motoristas = [
 ];
 
 function Transporte() {
+  const { t } = useTranslation();
+
   return (
     <div style={{ padding: '24px' }}>
       <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>
-        Opções de Transporte para o 40 do Mocoóca
+        {t('transporte_title')}
       </h2>
       <Row gutter={[16, 16]} justify="center">
         {motoristas.map((motorista) => (
@@ -36,7 +38,6 @@ function Transporte() {
                 width: 300,
                 minHeight: 420,
                 borderRadius: 8,
-                boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
                 textAlign: 'center',
                 display: 'flex',
                 flexDirection: 'column',
@@ -68,7 +69,7 @@ function Transporte() {
                     window.open(`https://wa.me/${motorista.whatsNumber}`, '_blank')
                   }
                 >
-                  WhatsApp
+                  {t('whatsapp')}
                 </Button>
               </div>
             </Card>
