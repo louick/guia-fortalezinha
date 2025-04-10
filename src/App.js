@@ -14,7 +14,7 @@ const { Content, Footer } = Layout;
 
 function App() {
   return (
-    <Router>
+    <Router basename="/guia-fortalezinha">
       <Layout>
         <MyHeader />
         <Content style={{ padding: '24px', minHeight: 'calc(100vh - 64px)' }}>
