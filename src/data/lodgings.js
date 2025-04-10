@@ -54,6 +54,13 @@ Check-in: 12h | Check-out: 12h
 • 4 pessoas (com frigobar): R$230,00
 • 5 pessoas (com frigobar): R$260,00
 
+Tipos de Quartos:
+- Quarto para 2 pessoas: possui uma cama de casal.
+- Quarto para 3 pessoas: possui uma cama de casal e uma cama de solteiro.
+- Quarto para 4 pessoas: possui uma cama de casal e um beliche.
+- Quarto para 5 pessoas: possui uma cama de casal, um beliche e uma cama de solteiro.
+Todos os quartos dispõem de banheiro privativo (dentro do quarto).
+
 Acomodações básicas com café da manhã incluído, localização central, ar-condicionado e Wi-Fi.
 Não aceitamos pets.
 
@@ -97,7 +104,7 @@ Condições Gerais de Reserva:
 `Opções de Acomodação na Casa do Carimbó:
 1. Chalé Maiandeua: Chalé com banheiro privativo, cama de casal, ventilador, mosquiteiro e varanda.
 2. Oca: Chalé bioconstruído com banheiro privativo, cama de casal, ventilador e mosquiteiro.
-3. Casa Mirasawa: Casa grande com vistas para a praia. Dispone de um amplo espaço coletivo no térreo (com banheiro e fogão à lenha) e, no andar superior, dois quartos:
+3. Casa Mirasawa: Casa grande com vistas para a praia. Dispõe de um amplo espaço coletivo no térreo (com banheiro e fogão à lenha) e, no andar superior, dois quartos:
     - Quarto 1: Com mezzanino, banheiro, ampla varanda com vista para a praia, 3 camas de casal e 1 cama de solteiro; com ventilador.
     - Quarto 2: Com cama de casal, mosquiteiro, ventilador e pequena varanda com vista para a praia.
 4. Chalé Nascer do Sol: Chalé com banheiro privativo, cama de casal, ventilador, mosquiteiro e pequena varanda com vistas para a praia.
@@ -178,15 +185,14 @@ Observação: Todos os valores incluem café da manhã.`
     showDetails: false,
     details: [
       { label: "Contato", value: "+55 91 99300-9866" },
-      { label: "E-mail", value: "contato@casadealuguel.com" },
-      { label: "Instagram", value: "@casadealuguel", link: "https://instagram.com/casadealuguel" }
+      { label: "Proprietário", value: "Davi Teixeira" }
     ],
     description:
 `Preços e Condições – Casa para Aluguel:
 Os valores variam conforme o período de locação:
 • Nas férias: finais de semana de julho variam de R$1.500,00 a R$3.000,00.
-• No final do ano: o valor é de R$3.000,00.
-• Para contratos especiais (ex.: COP30, em novembro): valores podem chegar a até R$5.000,00, considerando melhorias no espaço.
+• No final do ano: R$3.000,00.
+• Para contratos especiais (ex.: COP30, em novembro): até R$5.000,00, considerando melhorias no espaço.
 
 Entre em contato para mais informações: +55 91 99300-9866.`
   }
