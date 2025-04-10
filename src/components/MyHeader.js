@@ -75,6 +75,12 @@ function MyHeader() {
               {t('galeria') || 'Galeria'}
             </Link>
           </Menu.Item>
+          {/* Novo item para a página de Restaurantes na Praia */}
+          <Menu.Item key="/restaurantes-na-praia">
+            <Link to="/restaurantes-na-praia" onClick={() => setOpen(false)}>
+              {t('restaurantes_na_praia') || 'Restaurantes na Praia'}
+            </Link>
+          </Menu.Item>
         </Menu>
       </Drawer>
     </Header>

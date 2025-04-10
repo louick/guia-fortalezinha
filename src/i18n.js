@@ -24,7 +24,6 @@ const resources = {
       como_chegar: "Como Chegar",
       galeria: "Galeria",
       transporte_title: "Opções de Transporte para o 40 do Mocoóca",
-      // Nós da página Como Chegar
       carroMoto_label1: "Saia de Belém ou Castanhal\n(Carros/Motos)",
       carroMoto_label2: "Chegue em Igarapé Acu",
       carroMoto_label3: "Defina '40 do Mocoóca' no GPS",
@@ -34,15 +33,15 @@ const resources = {
       van_label2: "Chegue diretamente ao '40 do Mocoóca'",
       van_label3: "Atravessa de barco para a vila de Fortalezinha",
       destino_label: "Chegue ao hotel, seja feliz!",
-      // Filtros da página Lazer
       todos: "Todos",
       programacoes: "Programações",
       passeios: "Passeios",
       atividades: "Atividades",
-      // >>> Adicione as chaves do Kitesurf <<<
       kitesurf_title: "Aulas de Kitesurf",
       kitesurf_date: "Sábados e Domingos",
-      kitesurf_description: "Aprenda os fundamentos do kitesurf com instrutores especializados. Essa experiência única proporciona a adrenalina e a liberdade de dominar os ventos e as ondas em Fortalezinha. Venha viver essa aventura e aproveite cada momento!"
+      kitesurf_description: "Aprenda os fundamentos do kitesurf com instrutores especializados. Essa experiência única proporciona a adrenalina e a liberdade de dominar os ventos e as ondas em Fortalezinha. Venha viver essa aventura e aproveite cada momento!",
+      // Nova chave de tradução para Restaurantes na Praia
+      restaurantes_na_praia: "Restaurantes na Praia"
     }
   },
   en: {
@@ -66,7 +65,6 @@ const resources = {
       como_chegar: "How to Get There",
       galeria: "Gallery",
       transporte_title: "Transportation Options for 40 do Mocoóca",
-      // Nós da página Como Chegar
       carroMoto_label1: "Leave Belém or Castanhal\n(For Cars/Motorcycles)",
       carroMoto_label2: "Arrive at Igarapé Acu",
       carroMoto_label3: "Set '40 do Mocoóca' in your GPS",
@@ -76,15 +74,15 @@ const resources = {
       van_label2: "Arrive directly at '40 do Mocoóca'",
       van_label3: "Take a boat ride to Fortalezinha village",
       destino_label: "Arrive at the hotel, be happy!",
-      // Filtros da página Lazer
       todos: "All",
       programacoes: "Events",
       passeios: "Tours",
       atividades: "Activities",
-      // >>> Chaves do Kitesurf <<<
       kitesurf_title: "Kitesurf Lessons",
       kitesurf_date: "Saturdays and Sundays",
-      kitesurf_description: "Learn the fundamentals of kitesurfing with specialized instructors. This unique experience provides the adrenaline and freedom to master the winds and waves in Fortalezinha. Come and live this adventure and enjoy every moment!"
+      kitesurf_description: "Learn the fundamentals of kitesurfing with specialized instructors. This unique experience provides the adrenaline and freedom to master the winds and waves in Fortalezinha. Come and live this adventure and enjoy every moment!",
+      // Nova chave para a versão em inglês
+      restaurantes_na_praia: "Beach Restaurants"
     }
   },
   es: {
@@ -108,7 +106,6 @@ const resources = {
       como_chegar: "Cómo Llegar",
       galeria: "Galería",
       transporte_title: "Opciones de Transporte para el 40 do Mocoóca",
-      // Nós da página Cómo Llegar
       carroMoto_label1: "Salga de Belém o Castanhal\n(Para autos/motocicletas)",
       carroMoto_label2: "Llegue a Igarapé Acu",
       carroMoto_label3: "Configure '40 do Mocoóca' en su GPS",
@@ -118,15 +115,15 @@ const resources = {
       van_label2: "Llegue directamente a '40 do Mocoóca'",
       van_label3: "Cruce en barco a la aldea de Fortalezinha",
       destino_label: "Llegue al hotel, ¡sé feliz!",
-      // Filtros de Lazer
       todos: "Todos",
       programacoes: "Programaciones",
       passeios: "Tours",
       atividades: "Actividades",
-      // >>> Chaves del Kitesurf <<<
       kitesurf_title: "Clases de Kitesurf",
       kitesurf_date: "Sábados y Domingos",
-      kitesurf_description: "Aprende los fundamentos del kitesurf con instructores especializados. Esta experiencia única te brinda la adrenalina y la libertad de dominar los vientos y las olas en Fortalezinha. ¡Ven y vive esta aventura y disfruta cada momento!"
+      kitesurf_description: "Aprende los fundamentos del kitesurf con instructores especializados. Esta experiencia única te brinda la adrenalina y la libertad de dominar los vientos y las olas en Fortalezinha. ¡Ven y vive esta aventura y disfruta cada momento!",
+      // Nova chave para la versión en español
+      restaurantes_na_praia: "Restaurantes en la Playa"
     }
   }
 };
