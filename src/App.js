@@ -3,14 +3,15 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from 'antd';
 import MyHeader from './components/MyHeader';
+import MyFooter from './components/MyFooter'; // Importa o footer personalizado
 import Home from './pages/Home';
 import ComoChegar from './pages/ComoChegar';
 import Transporte from './pages/Transporte';
 import Lazer from './pages/Lazer';
 import Galeria from './pages/Galeria';
-import RestaurantesNaPraia from './pages/RestaurantesNaPraia'; // Importa a nova página
+import RestaurantesNaPraia from './pages/RestaurantesNaPraia';
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 
 function App() {
   return (
@@ -24,13 +25,10 @@ function App() {
             <Route path="/transporte" element={<Transporte />} />
             <Route path="/lazer" element={<Lazer />} />
             <Route path="/galeria" element={<Galeria />} />
-            {/* Nova rota para Restaurantes na Praia */}
             <Route path="/restaurantes-na-praia" element={<RestaurantesNaPraia />} />
           </Routes>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>
-          Guia de Fortalezinha ©2025
-        </Footer>
+        <MyFooter />
       </Layout>
     </Router>
   );
