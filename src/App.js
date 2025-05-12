@@ -2,8 +2,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from 'antd';
+
 import MyHeader from './components/MyHeader';
-import MyFooter from './components/MyFooter'; // Importa o footer personalizado
+import MyFooter from './components/MyFooter';   // o seu footer personalizado
+
 import Home from './pages/Home';
 import ComoChegar from './pages/ComoChegar';
 import Transporte from './pages/Transporte';
@@ -15,10 +17,11 @@ const { Content } = Layout;
 
 function App() {
   return (
-    <Router basename="/guia-fortalezinha">
-      <Layout>
+    <Router>
+      <Layout style={{ minHeight: '100vh' }}>
         <MyHeader />
-        <Content style={{ padding: '24px', minHeight: 'calc(100vh - 64px)' }}>
+
+        <Content style={{ padding: '24px 50px', flex: '1 0 auto' }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/como-chegar" element={<ComoChegar />} />
@@ -28,6 +31,7 @@ function App() {
             <Route path="/restaurantes-na-praia" element={<RestaurantesNaPraia />} />
           </Routes>
         </Content>
+
         <MyFooter />
       </Layout>
     </Router>
